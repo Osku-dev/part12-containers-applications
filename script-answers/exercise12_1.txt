@@ -1,0 +1,40 @@
+StatusCode        : 200
+StatusDescription : OK
+Content           :
+                    <!DOCTYPE html>
+                    <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+                    <head>
+                      <style>
+                        /* Hide Cookiebot branding as soon as page loads */
+                        #CybotCookiebotDialogHeader,
+                        #CybotCookiebo...
+RawContent        : HTTP/1.1 200 OK
+                    X-Drupal-Dynamic-Cache: MISS
+                    Link: <https://www.helsinki.fi/assets/drupal/styles/linkbox_image_16_10_tablet/s3/media-image/P 
+                    ilotsampling%2723_7_1744.jpg.webp?itok=Gk5QJOTh>; rel="pre...
+Forms             : {}
+Headers           : {[X-Drupal-Dynamic-Cache, MISS], [Link, <https://www.helsinki.fi/assets/drupal/styles/linkbox_i 
+                    mage_16_10_tablet/s3/media-image/Pilotsampling%2723_7_1744.jpg.webp?itok=Gk5QJOTh>; rel="precon 
+                    nect"; as="image",<https://www.helsinki.fi/assets/drupal/styles/hero_image_tablet/s3/media-imag 
+                    e/3030.png.webp?itok=RkxVKRke>; rel="preload"; as="image"; fetchpriority="high"], [Content-lang 
+                    uage, en], [X-Content-Type-Options, nosniff]...}
+Images            : {}
+InputFields       : {@{innerHTML=; innerText=; outerHTML=<INPUT id=pid-145767 type=hidden value=145767 name=pid>; o 
+                    uterText=; tagName=INPUT; id=pid-145767; type=hidden; value=145767; name=pid}}
+Links             : {@{innerHTML=Skip to main content ; innerText=Skip to main content ; outerHTML=<A class="visual
+                    ly-hidden focusable" href="#main-content">Skip to main content </A>; outerText=Skip to main con 
+                    tent ; tagName=A; class=visually-hidden focusable; href=#main-content}, @{innerHTML=News ; inne 
+                    rText=News ; outerHTML=<A href="/en/news" data-menu-link-id="0bda75ab91f8bad1d33de860414b7b17"  
+                    aria-current="News">News </A>; outerText=News ; tagName=A; href=/en/news; data-menu-link-id=0bd 
+                    a75ab91f8bad1d33de860414b7b17; aria-current=News}, @{innerHTML=<HY-ICON size="10" icon="hy-icon 
+                    -caret-right"></HY-ICON><SPAN>News and press releases </SPAN>; innerText=News and press release 
+                    s ; outerHTML=<A class=hy-desktop-menu__panel-link href="/en/news/news-and-press-releases" targ 
+                    et=_self><HY-ICON size="10" icon="hy-icon-caret-right"></HY-ICON><SPAN>News and press releases  
+                    </SPAN></A>; outerText=News and press releases ; tagName=A; class=hy-desktop-menu__panel-link;  
+                    href=/en/news/news-and-press-releases; target=_self}, @{innerHTML=<HY-ICON size="10" icon="hy-i 
+                    con-caret-right"></HY-ICON><SPAN>War in Ukraine </SPAN>; innerText=War in Ukraine ; outerHTML=< 
+                    A class=hy-desktop-menu__panel-link href="/en/news/war-ukraine" target=_self><HY-ICON size="10" 
+                     icon="hy-icon-caret-right"></HY-ICON><SPAN>War in Ukraine </SPAN></A>; outerText=War in Ukrain 
+                    e ; tagName=A; class=hy-desktop-menu__panel-link; href=/en/news/war-ukraine; target=_self}...}  
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 384129
