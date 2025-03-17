@@ -1,0 +1,14 @@
+user@wsl:~$ docker run -it ubuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+5a7813e071bf: Download complete
+Digest: sha256:72297848456d5d37d1262630108ab308d3e9ec7ed1c3286a32fe09856619a782
+Status: Downloaded newer image for ubuntu:latest
+root@6cb3dc96a87f:/# mkdir -p /usr/src/app
+root@6cb3dc96a87f:/# touch /usr/src/app/index.js
+root@6cb3dc96a87f:/# exit
+exit
+user@wsl:~$ exit
+exit
+
+Script done on 2025-03-17 06:26:18+02:00 [COMMAND_EXIT_CODE="0"]
