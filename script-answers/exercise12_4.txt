@@ -1,0 +1,7 @@
+user@wsl:~$ docker start -i wonderful_wescoff
+root@6cb3dc96a87f:/# node /usr/src/app/index.js
+Hello World
+root@6cb3dc96a87f:/# exit
+exit
+user@wsl:~$ exit
+exit
