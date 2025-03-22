@@ -1,0 +1,21 @@
+// Didn't use script so i'm gonna tell what i did.
+
+docker exec -it todo-backend-mongo-1 bash
+
+mongosh
+
+use admin
+db.auth("root", "example")
+
+show dbs
+use the_database
+show collections
+todos
+db.todos.find({})
+db.todos.insertOne({
+  text: "Increase the number of tools in my tool belt",
+  done: false
+})
+db.todos.find({})
+exit
+exit
