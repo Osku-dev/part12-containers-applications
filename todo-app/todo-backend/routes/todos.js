@@ -1,9 +1,9 @@
 const express = require('express');
 const { Todo } = require('../mongo')
 const { getAsync, setAsync } = require('../redis');
+const { TODO_COUNTER_KEY } = require('../util/constants');
 const router = express.Router();
 
-const TODO_COUNTER_KEY = 'todo_counter';
 
 /* GET todos listing. */
 router.get('/', async (_, res) => {
@@ -28,15 +28,7 @@ router.post('/', async (req, res) => {
 }
 });
 
-router.get('/statistics', async (req, res) => {
-  try {
-      const count = (await getAsync(TODO_COUNTER_KEY)) || 0;
-      res.json({ added_todos: parseInt(count) });
-  } catch (error) {
-      console.error('Error fetching statistics:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
-  }
-});
+
 
 const singleRouter = express.Router();
 
