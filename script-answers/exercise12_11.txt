@@ -1,0 +1,18 @@
+user@wsl:~$ docker exec -it todo-backend-redis-1 redis-cli
+127.0.0.1:6379> KEYS *
+1) "todo_counter"
+127.0.0.1:6379> GET todo_counter
+"1"
+127.0.0.1:6379> SET todo_counter 9001
+OK
+127.0.0.1:6379> GET todo_counter
+"9001"
+127.0.0.1:6379> GET todo_counter
+"9002"
+127.0.0.1:6379> DEL todo_counter
+(integer) 1
+127.0.0.1:6379> GET todo_counter
+(nil)
+127.0.0.1:6379> GET todo_counter
+"1"
+127.0.0.1:6379> exit
