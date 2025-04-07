@@ -1,20 +1,26 @@
 # The first FROM is now a stage called build-stage
-
 FROM node:20 AS build-stage 
 
 WORKDIR /usr/src/app
 
+# Copy everything except what's in .dockerignore
 COPY . .
 
+# Set environment variable for Vite before building
+ENV VITE_BACKEND_URL=http://localhost:3000
+
+# Install dependencies
 RUN npm ci
 
+# Run tests once (Vitest etc.)
+RUN npm run test -- --run
+
+# Build the frontend after tests pass
 RUN npm run build
 
-# This is a new stage, everything before this is gone, except for the files that we want to COPY
 
+# Final stage: lightweight image to serve the app
 FROM nginx:1.25-alpine
 
-# COPY the directory dist from the build-stage to /usr/share/nginx/html
-# The target location here was found from the Docker hub page
-
+# Copy built frontend from build-stage
 COPY --from=build-stage /usr/src/app/dist /usr/share/nginx/html
