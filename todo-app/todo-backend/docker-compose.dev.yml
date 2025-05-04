@@ -1,4 +1,14 @@
 services:
+  server:
+    image: backend
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3000:3000
+    container_name: backend-dev
+    environment: 
+      - REDIS_URL=${REDIS_URL}
+      - MONGO_URL=${MONGO_URL}
   mongo:
     image: mongo
     ports:
