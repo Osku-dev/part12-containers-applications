@@ -16,6 +16,12 @@ services:
       - ./todo-backend:/usr/src/app
     ports:
       - 3000:3000
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - MONGO_URL=mongodb://root:example@mongo:27017/the_database
+    depends_on:
+      - mongo
+      - redis
 
   nginx:
     image: nginx:1.20.1
@@ -27,3 +33,23 @@ services:
     depends_on:
       - app
       - backend
+
+  mongo:
+    image: mongo
+    ports:
+      - 3456:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: the_database
+    volumes: 
+      - ./todo-backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+    restart: always
+    command: ['redis-server', '--appendonly', 'yes']
+    volumes:
+      - ./todo-backend/redis_data:/data
