@@ -1,0 +1,7 @@
+{
+  "watch": ["bin", "app.js", "routes", "models"],
+  "ext": "js,json",
+  "ignore": ["node_modules"],
+  "legacyWatch": true,
+  "exec": "node ./bin/www"
+}

@@ -9,4 +9,11 @@ export default defineConfig({
     globals: true,
     setupFiles: './src/setupTests.js',
   },
+  server: {
+    host: true,
+    watch: {
+      usePolling: true,     
+      interval: 100,        
+    },
+  },
 })
