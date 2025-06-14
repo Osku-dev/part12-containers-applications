@@ -3,11 +3,13 @@ FROM node:20 AS build-stage
 
 WORKDIR /usr/src/app
 
+
 # Copy everything except what's in .dockerignore
 COPY . .
 
-# Set environment variable for Vite before building
-ENV VITE_BACKEND_URL=http://localhost:3000
+ARG VITE_BACKEND_URL
+ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
+
 
 # Install dependencies
 RUN npm ci
@@ -16,11 +18,6 @@ RUN npm ci
 RUN npm run test -- --run
 
 # Build the frontend after tests pass
-RUN npm run build
+RUN VITE_BACKEND_URL=$VITE_BACKEND_URL npm run build
 
 
-# Final stage: lightweight image to serve the app
-FROM nginx:1.25-alpine
-
-# Copy built frontend from build-stage
-COPY --from=build-stage /usr/src/app/dist /usr/share/nginx/html
