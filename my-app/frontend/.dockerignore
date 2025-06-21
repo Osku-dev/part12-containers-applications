@@ -1,0 +1,27 @@
+# Node modules
+node_modules
+
+# Build output (just in case)
+dist
+build
+
+# Local environment variables
+.env
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Git and related
+.git
+.gitignore
+
+# IDE/editor files
+.vscode
+*.swp
+*.swo
+
+# Docker-related
+Dockerfile*
+docker-compose.yml

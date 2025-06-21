@@ -1,0 +1,23 @@
+# Node modules – should be installed fresh in container
+node_modules
+
+# Local environment variables
+.env
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Git and related
+.git
+.gitignore
+
+# IDE/editor files
+.vscode
+*.swp
+*.swo
+
+# Docker-related (usually not needed inside container)
+Dockerfile*
+docker-compose.yml
